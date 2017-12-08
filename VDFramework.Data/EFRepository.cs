@@ -21,9 +21,9 @@ namespace VDFramework.Data
 
         #region Ctor
 
-        public EFRepository()
+        public EFRepository(IDbContext context)
         {
-            _context=new VdObjectContext();
+            _context=context;
         }
 
         #endregion

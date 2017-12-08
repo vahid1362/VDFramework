@@ -12,7 +12,7 @@ namespace VDFramwork.Test
         {
 
             var personService = new PersonService();
-            var x=personService.GetUser(1);
+            var x = personService.GetUser(1);
             Assert.IsNotNull(x);
 
         }

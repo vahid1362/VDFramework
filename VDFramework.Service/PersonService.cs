@@ -11,24 +11,23 @@ namespace VDFramework.Service
 {
     public class PersonService
     {
-        private readonly IRepository<Person> _personRepository;
-        private readonly IRepository<User> _useRepository;
+        private readonly UnitOfWork _unitOfWork;
+       
 
         public PersonService()
         {
-            _personRepository=new EFRepository<Person>();
-            _useRepository=new EFRepository<User>();
+         _unitOfWork=new UnitOfWork();
         }
 
 
         public Person GetPerson(long personId)
         {
-            return _personRepository.TableNoTracking.FirstOrDefault(x => x.Id == personId);
+            return _unitOfWork.PersonRepository.TableNoTracking.FirstOrDefault(x => x.Id == personId);
         }
 
         public User GetUser(long userId)
         {
-            return _useRepository.TableNoTracking.FirstOrDefault(x => x.Id == userId);
+            return _unitOfWork.UserRepository.TableNoTracking.FirstOrDefault(x => x.Id == userId);
         }
 
 
