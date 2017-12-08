@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="EFRepository.cs" />
     <Compile Include="IDbContext.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Migrations\201712070733333_initial.cs" />
     <Compile Include="Migrations\201712070733333_initial.Designer.cs">
       <DependentUpon>201712070733333_initial.cs</DependentUpon>
