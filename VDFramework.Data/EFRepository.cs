@@ -27,6 +27,7 @@ namespace VDFramework.Data
         }
 
         #endregion
+
         #region Methods
 
         /// <summary>
